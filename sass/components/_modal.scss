@@ -11,3 +11,6 @@
   background-color: var(--primery-background-color);
   border-radius: 4px;
 }
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.1);
+}

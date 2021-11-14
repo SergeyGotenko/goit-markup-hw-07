@@ -422,78 +422,55 @@ img {
   margin-left: 10px;
 }
 
-.header-container {
-  display: flex;
-  align-items: center;
-}
-
-.site-nav {
-  display: flex;
-  align-items: center;
-}
-
-.nav-list {
-  display: flex;
-}
-
-.nav-item {
-  position: relative;
-}
-
-.nav-link-studio::after {
-  content: '';
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--accent-color);
-  display: block;
-  position: absolute;
-  top: 46px;
-}
-
-.nav-link-portfolio::after {
-  content: '';
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--accent-color);
-  display: block;
-  position: absolute;
-  top: 46px;
-}
-
 .header {
   border: 1px solid var(--border-color);
   padding-top: 24px;
   padding-bottom: 25px;
 }
 
-.nav-link {
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item {
+  position: relative;
+}
+
+.nav .nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav__link {
   letter-spacing: 0.02em;
   color: var(--primery-text-color);
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.site-nav .nav-item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.nav-link:hover,
-.nav-link:focus {
+.nav__link:hover, .nav__link:focus {
   color: var(--accent-color);
 }
 
-.site-nav .nav-link.current {
+.nav .nav__link.current {
   color: var(--accent-color);
 }
 
-.header-contacts {
+.header__contacts {
   display: flex;
   margin-left: auto;
 }
 
-.contacts-link {
+.contacts__link {
   display: flex;
   align-items: center;
   color: var(--second-text-color);
@@ -501,17 +478,39 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts-link:hover, .contacts-link:focus {
+.contacts__link:hover, .contacts__link:focus {
   color: var(--accent-color);
 }
 
-.contacts-link:not(:last-child) {
+.contacts__link:not(:last-child) {
   margin-right: 50px;
 }
 
-.contacts-icon {
+.contacts__icon {
   fill: currentColor;
   margin-right: 10px;
+}
+
+.nav__link__studio::after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+  display: block;
+  position: absolute;
+  top: 46px;
+}
+
+.nav__link__portfolio::after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+  display: block;
+  position: absolute;
+  top: 46px;
 }
 
 .hero {
